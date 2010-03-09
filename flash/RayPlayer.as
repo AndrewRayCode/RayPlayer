@@ -139,13 +139,13 @@
 		}
 		
 		public function loadJSSong(song:String) {
-			setCategoryFromString('All Categories');
+			this.setCategoryFromString('All Categories');
 			song = song.replace('http://andrewray.me', '');
 			for(var x=0; x<playlist.length; x++) {
 				if(playlist[x].file == song) {
 					playlistClick(x);
+					break;
 				}
-				break;
 			}
 		}
 		
@@ -450,6 +450,7 @@
 			channel = currentSong.play(pauseTime);
 			channel.soundTransform = transForm;
 			isPlaying = true;
+			ExternalInterface.call('setSongPlaying', playlist[songIndex].title);
 		}
 		
 		public function pauseSong():void {
