@@ -19,6 +19,7 @@
 	import fl.transitions.easing.*;
 	import fl.transitions.TweenEvent;
 	import flash.events.IOErrorEvent;
+	import flash.external.ExternalInterface;
 	import Cloud;
 	
 	public class RayPlayer extends MovieClip {
@@ -129,10 +130,23 @@
 			faceplate.link.useHandCursor = true;
 			faceplate.link.buttonMode = true;
 			faceplate.link.addEventListener(MouseEvent.CLICK, launchHome);
+			
+			ExternalInterface.addCallback('loadJSSong', this.loadJSSong);
 		}
 		
 		private function launchHome(thing:* = false) {
 			navigateToURL(new URLRequest('http://andrewray.me/'));
+		}
+		
+		public function loadJSSong(song:String) {
+			setCategoryFromString('All Categories');
+			song = song.replace('http://andrewray.me', '');
+			for(var x=0; x<playlist.length; x++) {
+				if(playlist[x].file == song) {
+					playlistClick(x);
+				}
+				break;
+			}
 		}
 		
 		private function listHoverHandler(e:RayEvent) {
@@ -513,9 +527,12 @@
 		}
 		
 		private function changeCategory(e:Event) {
-			var cat = e.target.value;
+			this.setCategoryFromString(e.target.value);
+		}
+		
+		private function setCategoryFromString(str:String) {
 			songIndex = 0;
-			makePlaylist({category: cat == 'All Categories' ? '*' : cat});
+			makePlaylist({category: str == 'All Categories' ? '*' : str});
 		}
 		
 		private function makePlaylist(obj:Object):void {
@@ -537,7 +554,7 @@
 			this.refreshList();
 		}
 		
-		private function playlistClick(i:Number, data:Object) {
+		private function playlistClick(i:Number, data:Object = null) {
 			stopSong();
 			songIndex = i;
 			loadSong();
