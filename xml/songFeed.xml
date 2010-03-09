@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <songs>
-	<song title="Underlord 2" category="electronica" file="music/underlord2.mp3" length="0" bitrate=""/>
-	<song title="Pan Fried Bacon" category="piano" file="music/PanFriedBacon.mp3" length="339000" bitrate="128"/>
-	<song title="Midnight On A Kentucky Porch" category="electronica" file="music/MidnightOnAKentuckyPorch.mp3" length="208000" bitrate="192"/>
-	<song title="Underlord 2" category="electronica" file="music/underlord2.mp3" length="0" bitrate=""/>
-	<song title="Pan Fried Bacon" category="piano" file="music/PanFriedBacon.mp3" length="339000" bitrate="128"/>
-	<song title="Midnight On A Kentucky Porch" category="electronica" file="music/MidnightOnAKentuckyPorch.mp3" length="208000" bitrate="192"/>
-	<song title="Underlord 2" category="electronica" file="music/underlord2.mp3" length="0" bitrate=""/>
-	<song title="Pan Fried Bacon" category="piano" file="music/PanFriedBacon.mp3" length="339000" bitrate="128"/>
-	<song title="Midnight On A Kentucky Porch" category="electronica" file="music/MidnightOnAKentuckyPorch.mp3" length="208000" bitrate="192"/>
-	<song title="Underlord 2" category="electronica" file="music/underlord2.mp3" length="0" bitrate=""/>
-	<song title="Pan Fried Bacon" category="piano" file="music/PanFriedBacon.mp3" length="339000" bitrate="128"/>
-	<song title="Midnight On A Kentucky Porch" category="electronica" file="music/MidnightOnAKentuckyPorch.mp3" length="208000" bitrate="192"/>
-	<song title="Underlord 2" category="electronica" file="music/underlord2.mp3" length="0" bitrate=""/>
-	<song title="Pan Fried Bacon" category="piano" file="music/PanFriedBacon.mp3" length="339000" bitrate="128"/>
-	<song title="Midnight On A Kentucky Porch" category="electronica" file="music/MidnightOnAKentuckyPorch.mp3" length="208000" bitrate="192"/>
-	<song title="Underlord 2" category="electronica" file="music/underlord2.mp3" length="0" bitrate=""/>
-	<song title="Pan Fried Bacon" category="piano" file="music/PanFriedBacon.mp3" length="339000" bitrate="128"/>
-	<song title="Midnight On A Kentucky Porch" category="electronica" file="music/MidnightOnAKentuckyPorch.mp3" length="208000" bitrate="192"/>
-	<song title="Underlord 2" category="electronica" file="music/underlord2.mp3" length="0" bitrate=""/>
-	<song title="Pan Fried Bacon" category="piano" file="music/PanFriedBacon.mp3" length="339000" bitrate="128"/>
-	<song title="Midnight On A Kentucky Porch" category="electronica" file="music/MidnightOnAKentuckyPorch.mp3" length="208000" bitrate="192"/>
+	<song title="Underlord 2" category="electronica" file="../music/underlord2.mp3" length="0" bitrate=""/>
+	<song title="Pan Fried Bacon" category="piano" file="../music/PanFriedBacon.mp3" length="339000" bitrate="128"/>
+	<song title="Midnight On A Kentucky Porch" category="electronica" file="../music/MidnightOnAKentuckyPorch.mp3" length="208000" bitrate="192"/>
+	<song title="Underlord 2" category="electronica" file="../music/underlord2.mp3" length="0" bitrate=""/>
+	<song title="Pan Fried Bacon" category="piano" file="../music/PanFriedBacon.mp3" length="339000" bitrate="128"/>
+	<song title="Midnight On A Kentucky Porch" category="electronica" file="../music/MidnightOnAKentuckyPorch.mp3" length="208000" bitrate="192"/>
+	<song title="Underlord 2" category="electronica" file="../music/underlord2.mp3" length="0" bitrate=""/>
+	<song title="Pan Fried Bacon" category="piano" file="../music/PanFriedBacon.mp3" length="339000" bitrate="128"/>
+	<song title="Midnight On A Kentucky Porch" category="electronica" file="../music/MidnightOnAKentuckyPorch.mp3" length="208000" bitrate="192"/>
+	<song title="Underlord 2" category="electronica" file="../music/underlord2.mp3" length="0" bitrate=""/>
+	<song title="Pan Fried Bacon" category="piano" file="../music/PanFriedBacon.mp3" length="339000" bitrate="128"/>
+	<song title="Midnight On A Kentucky Porch" category="electronica" file="../music/MidnightOnAKentuckyPorch.mp3" length="208000" bitrate="192"/>
+	<song title="Underlord 2" category="electronica" file="../music/underlord2.mp3" length="0" bitrate=""/>
+	<song title="Pan Fried Bacon" category="piano" file="../music/PanFriedBacon.mp3" length="339000" bitrate="128"/>
+	<song title="Midnight On A Kentucky Porch" category="electronica" file="../music/MidnightOnAKentuckyPorch.mp3" length="208000" bitrate="192"/>
+	<song title="Underlord 2" category="electronica" file="../music/underlord2.mp3" length="0" bitrate=""/>
+	<song title="Pan Fried Bacon" category="piano" file="../music/PanFriedBacon.mp3" length="339000" bitrate="128"/>
+	<song title="Midnight On A Kentucky Porch" category="electronica" file="../music/MidnightOnAKentuckyPorch.mp3" length="208000" bitrate="192"/>
+	<song title="Underlord 2" category="electronica" file="../music/underlord2.mp3" length="0" bitrate=""/>
+	<song title="Pan Fried Bacon" category="piano" file="../music/PanFriedBacon.mp3" length="339000" bitrate="128"/>
+	<song title="Midnight On A Kentucky Porch" category="electronica" file="../music/MidnightOnAKentuckyPorch.mp3" length="208000" bitrate="192"/>
 </songs>

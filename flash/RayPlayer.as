@@ -51,7 +51,7 @@
 		public function RayPlayer() {
 			var xmlLoader:URLLoader = new URLLoader();
 			var songData:XML = new XML();
-			var xmlPath = root.loaderInfo.parameters.xml_path || 'songFeed.xml';
+			var xmlPath = root.loaderInfo.parameters.xml_path || '../xml/songFeed.xml';
 			if(!xmlPath) {
 				error('Xml path '+xmlPath+' was not readable!');
 			} else {
@@ -126,7 +126,6 @@
 				}
 			}
 			
-			gears.stop();
 			faceplate.link.useHandCursor = true;
 			faceplate.link.buttonMode = true;
 			faceplate.link.addEventListener(MouseEvent.CLICK, launchHome);
@@ -217,19 +216,10 @@
 		
 		private function startMachine(e:Event) {
 			if(!hasStarted) {
-				gears.play();
 				faceplate.removeEventListener(MouseEvent.MOUSE_OVER, startMachine);
 				this.addEventListener(Event.ENTER_FRAME, frameEventHandler);
 				hasStarted = true;
 				this.gotoAndPlay(1);
-				
-				var cloud:Cloud;
-				for(var x=0; x<maxClouds / 2; x++) {
-					cloud = makeCloud();
-					cloud.x = randInt(0, stage.stageWidth);
-					clouds.push(cloud);
-					fadeIn(cloud, 3, cloud.alpha);
-				}
 			}
 		}
 		
@@ -291,42 +281,6 @@
 					}
 				}
 			}
-			
-			// Handle Clouds
-			if(clouds.length < maxClouds && Math.random() < 0.005) {
-				var cloud = makeCloud();
-				clouds.push(cloud);
-			}
-			for(var x=clouds.length-1; x>=0; x--) {
-				clouds[x].x -= clouds[x].speed;
-				if(clouds[x].x + clouds[x].width < 0) {
-					clouds[x].parent.removeChild(clouds[x]);
-					clouds.splice(x, 1);
-				}
-			}
-		}
-		
-		private function makeCloud():Cloud {
-			var cloud = new Cloud();
-			cloud.gotoAndStop(randInt(1,4));
-			cloud.x = stage.stageWidth + cloud.x;
-			cloud.y = 580 + (Math.random() * 20);
-			cloud.speed = 0.06 + (Math.random() * 0.1);
-			cloud.scaleX = 0.6 + (Math.random() * 0.2);
-			cloud.scaleY = 0.6 + (Math.random() * 0.2);
-			cloud.alpha = 0.6 + (Math.random() * 0.2);
-			cloud.useHandCursor = true;
-			cloud.buttonMode = true;
-			cloud.addEventListener(MouseEvent.CLICK, popCloud);
-			var r = Math.random();
-			if(r < 0.1) {
-				bottom.addChild(cloud);
-			} else if(r < 0.3) {
-				middle.addChild(cloud);
-			} else {
-				this.addChild(cloud);
-			}
-			return cloud;
 		}
 		
 		private function volumeHandler(e:RayEvent):void {
@@ -457,6 +411,9 @@
 			fadePrevious = true;
 			
 			var soundRequest:URLRequest = new URLRequest(playlist[songIndex].file);
+			if(currentSong) {
+				currentSong.removeEventListener(ProgressEvent.PROGRESS, songLoadHandler);
+			}
 			currentSong = new Sound();
 			currentSong.load(soundRequest);
 
